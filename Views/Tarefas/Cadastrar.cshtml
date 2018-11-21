@@ -1,0 +1,53 @@
+@{
+    Layout = "MasterPageDeslogado";
+}
+
+<head>
+    <meta charset="utf-8" />
+    <title>Tarefas</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+</head>
+
+<body>
+
+    <h1>Cadastro de Tarefas</h1>
+
+    <form action="/Tarefas/Cadastrar" method="POST">
+        <label for="">
+            Nome
+            <input type="text" name="nome" required="true">
+        </label>
+
+        <label for="">
+            Descrição
+            <input type="text" name="descricao" required="true">
+        </label>
+
+        <label for="">
+            Tipo
+            <select name="tipo">
+                <option value="to-do">Para fazer</option>
+                <option value="doing">Fazendo</option>
+                <option value="done">Feito</option>
+            </select>
+        </label>
+
+        <!-- <label for="">
+            IdUsuario
+            <input type="number" name="IdUsuario" required="true">
+        </label>
+
+        <label for="">
+            Data de Criação
+            <input type="date" name="data" required="true">
+        </label> -->
+
+        <input type="submit" value="Cadastrar Tarefas">
+
+    </form>
+
+    @ViewBag.Mensagem
+
+</body>

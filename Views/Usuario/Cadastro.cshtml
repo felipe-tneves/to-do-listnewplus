@@ -1,0 +1,53 @@
+@{
+    Layout = "MasterPageDeslogado";
+}
+
+<head>
+    <meta charset="utf-8" />
+    <title>Usuários</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+</head>
+
+<body>
+
+    <h1>Cadastro de Usuários</h1>
+
+    <form action="/Usuario/Cadastro" method="POST" required="true">
+
+        <label for="">
+            Nome:
+            <input type="text" name="nome" required="true">
+        </label>
+
+        <label for="">
+            Email:
+            <input type="email" name="email" required="true">
+        </label>
+
+        <label for="">
+            Senha:
+            <input type="password" name="senha" required="true">
+        </label>
+
+        <label for="">
+            Tipo
+            <select name="tipo">
+                <option value="Administrador">Administrador</option>
+                <option value="User">User</option>
+            </select>
+        </label>
+
+        <label for="">
+            Data de Nascimento:
+            <input type="date" name="nascimento" required="true">
+        </label>
+
+        <input type="submit" value="Cadastrar Usuário">
+
+    </form>
+
+    @ViewBag.Mensagem
+
+</body>
